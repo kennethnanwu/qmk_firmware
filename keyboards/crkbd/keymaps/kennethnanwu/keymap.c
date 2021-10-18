@@ -24,9 +24,9 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   //,-----------------------------------------------------.                    ,-----------------------------------------------------.
        KC_TAB,    KC_Q,    KC_W,    KC_E,    KC_R,    KC_T,                         KC_Y,    KC_U,    KC_I,    KC_O,   KC_P,  KC_BSPC,
   //|--------+--------+--------+--------+--------+--------|                    |--------+--------+--------+--------+--------+--------|
-      KC_ESC,    KC_A,    KC_S,    KC_D, LT(1,KC_F),  KC_G,                         KC_H,    KC_J,    KC_K,    KC_L, KC_SCLN, KC_QUOT,
+      KC_ESC,    KC_A,    KC_S,    KC_D, LT(1,KC_F),  KC_G,                         KC_H,    KC_J,    KC_K,  KC_L,RSFT_T(KC_SCLN),KC_QUOT,
   //|--------+--------+--------+--------+--------+--------|                    |--------+--------+--------+--------+--------+--------|
-      KC_LSFT,LSFT_T(KC_Z),KC_X,   KC_C,    KC_V,    KC_B,                         KC_N,    KC_M, KC_COMM,  KC_DOT,RSFT_T(KC_SLSH),KC_BSLS,
+      KC_LSFT,   KC_Z,     KC_X,   KC_C,    KC_V,    KC_B,                         KC_N,    KC_M, KC_COMM,  KC_DOT, KC_SLSH, KC_BSLS,
   //|--------+--------+--------+--------+--------+--------+--------|  |--------+--------+--------+--------+--------+--------+--------|
                                           KC_CAPS, KC_LGUI, LCTL_T(KC_SPC),LT(2,KC_ENT), KC_LALT, LT(3,KC_DEL)
                                       //`--------------------------'  `--------------------------'
@@ -63,7 +63,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   //|--------+--------+--------+--------+--------+--------|                    |--------+--------+--------+--------+--------+--------|
       RGB_TOG, RGB_MOD, RGB_SAI, RGB_VAI, RGB_HUI, RGB_SPI,                        KC_F7,  KC_F8,  KC_F9,   KC_F10,  KC_F11,  KC_F12,
   //|--------+--------+--------+--------+--------+--------|                    |--------+--------+--------+--------+--------+--------|
-      KC_NO,  RGB_RMOD, RGB_SAD, RGB_VAD, RGB_HUD, RGB_SPD,                      BL_TOGG, BL_BRTG, BL_INC,  BL_DEC,   KC_NO,  KC_NO,
+      KC_NO,  RGB_RMOD, RGB_SAD, RGB_VAD, RGB_HUD, RGB_SPD,                      BL_TOGG, BL_BRTG, BL_INC,  BL_DEC,   BL_BRTG,  KC_NO,
   //|--------+--------+--------+--------+--------+--------+--------|  |--------+--------+--------+--------+--------+--------+--------|
                                           KC_NO,   KC_NO,   KC_NO,       KC_NO,   KC_NO, LT(3,KC_DEL)
                                       //`--------------------------'  `--------------------------'
