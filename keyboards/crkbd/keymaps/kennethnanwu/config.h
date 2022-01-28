@@ -24,14 +24,28 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 /* Select hand configuration */
 
-#define MASTER_LEFT
-// #define MASTER_RIGHT
+// #define MASTER_LEFT
+#define MASTER_RIGHT
 // #define EE_HANDS
 
 #define USE_SERIAL_PD2
 
-#define TAPPING_FORCE_HOLD
-#define TAPPING_TERM 100
+// enable light layers
+// #define RGBLIGHT_LAYERS
+// #define RGBLIGHT_MAX_LAYERS 4
+// #define RGBLIGHT_LAYERS_OVERRIDE_RGB_OFF 
+
+// #define RGB_MATRIX_ENABLE
+
+
+// When the user holds a key after tapping it, the tapping function is 
+// repeated by default, rather than activating the hold function. 
+// This allows keeping the ability to auto-repeat the tapping function of a dual-role key. 
+// TAPPING_FORCE_HOLD removes that ability to let the user activate the hold function instead,
+// in the case of holding the dual-role key after having tapped it.
+// #define TAPPING_FORCE_HOLD
+#define TAPPING_TERM 250
+#define TAPPING_TOGGLE 1
 
 #ifdef RGBLIGHT_ENABLE
     #undef RGBLED_NUM
