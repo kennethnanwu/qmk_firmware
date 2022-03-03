@@ -18,9 +18,9 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 #include QMK_KEYBOARD_H
 #include <stdio.h>
-#ifdef RGB_MATRIX_ENABLE
-#include "rgb_matrix_user.h"
-#endif
+// #ifdef RGB_MATRIX_ENABLE
+// #include "rgb_matrix_user.h"
+// #endif
 
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   [0] = LAYOUT_split_3x6_3(
@@ -74,33 +74,34 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   )
 };
 
-// const rgblight_segment_t PROGMEM layer_navi[] = RGBLIGHT_LAYER_SEGMENTS(
-//     {1, 20, HSV_GREEN}
-// );
+const rgblight_segment_t PROGMEM layer_navi[] = RGBLIGHT_LAYER_SEGMENTS(
+    {1, 20, HSV_GREEN}
+);
 
-// const rgblight_segment_t PROGMEM layer_caps[] = RGBLIGHT_LAYER_SEGMENTS(
-//     {1, 20, HSV_RED}
-// );
+const rgblight_segment_t PROGMEM layer_caps[] = RGBLIGHT_LAYER_SEGMENTS(
+    {1, 20, HSV_RED}
+);
 
-// // Now define the array of layers. Later layers take precedence
-// const rgblight_segment_t* const PROGMEM my_rgb_layers[] = RGBLIGHT_LAYERS_LIST(
-//     layer_navi,
-//     layer_caps
-// );
-// void keyboard_post_init_user(void) {
-//     // Enable the LED layers
-//     rgblight_layers = my_rgb_layers;
-// };
+// Now define the array of layers. Later layers take precedence
+const rgblight_segment_t* const PROGMEM my_rgb_layers[] = RGBLIGHT_LAYERS_LIST(
+    layer_navi,
+    layer_caps
+);
 
-// bool led_update_user(led_t led_state) {
-//     rgblight_set_layer_state(1, led_state.caps_lock);
-//     return true;
-// };
+void keyboard_post_init_user(void) {
+    // Enable the LED layers
+    rgblight_layers = my_rgb_layers;
+}
 
-// layer_state_t layer_state_set_user(layer_state_t state) {
-//     rgblight_set_layer_state(0, layer_state_cmp(state, 1));
-//     return state;
-// };
+bool led_update_user(led_t led_state) {
+    rgblight_set_layer_state(1, led_state.caps_lock);
+    return true;
+}
+
+layer_state_t layer_state_set_user(layer_state_t state) {
+    rgblight_set_layer_state(0, layer_state_cmp(state, 1));
+    return state;
+}
 
 
 #ifdef OLED_ENABLE

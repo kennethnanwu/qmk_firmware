@@ -31,9 +31,10 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #define USE_SERIAL_PD2
 
 // enable light layers
-// #define RGBLIGHT_LAYERS
-// #define RGBLIGHT_MAX_LAYERS 4
-// #define RGBLIGHT_LAYERS_OVERRIDE_RGB_OFF
+#define RGBLIGHT_LAYERS
+#define RGBLIGHT_MAX_LAYERS 4
+#define RGBLIGHT_LAYERS_OVERRIDE_RGB_OFF
+#define SPLIT_LAYER_STATE_ENABLE
 
 // #define RGB_MATRIX_ENABLE
 
@@ -47,15 +48,15 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #define TAPPING_TERM 250
 #define TAPPING_TOGGLE 1
 
-#ifdef RGBLIGHT_ENABLE
-    #undef RGBLED_NUM
-    #define RGBLIGHT_ANIMATIONS
-    #define RGBLED_NUM 27
-    #define RGBLIGHT_LIMIT_VAL 120
-    #define RGBLIGHT_HUE_STEP 10
-    #define RGBLIGHT_SAT_STEP 17
-    #define RGBLIGHT_VAL_STEP 17
-#endif
+// #ifdef RGBLIGHT_ENABLE
+//     #undef RGBLED_NUM
+//     #define RGBLIGHT_ANIMATIONS
+//     #define RGBLED_NUM 27
+//     #define RGBLIGHT_LIMIT_VAL 120
+//     #define RGBLIGHT_HUE_STEP 10
+//     #define RGBLIGHT_SAT_STEP 17
+//     #define RGBLIGHT_VAL_STEP 17
+// #endif
 
 #define OLED_FONT_H "keyboards/crkbd/lib/glcdfont.c"
 
