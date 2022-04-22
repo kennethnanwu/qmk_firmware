@@ -50,11 +50,13 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 };
 
 const rgblight_segment_t PROGMEM layer_navi[] = RGBLIGHT_LAYER_SEGMENTS(
-    {1, 21, HSV_GREEN}
+    {1, 10, HSV_GREEN},
+    {22, 20, HSV_GREEN}
 );
 
 const rgblight_segment_t PROGMEM layer_caps[] = RGBLIGHT_LAYER_SEGMENTS(
-    {22, 42, HSV_RED}
+    {11, 10, HSV_RED},
+    {32, 5, HSV_RED}
 );
 
 // Now define the array of layers. Later layers take precedence
