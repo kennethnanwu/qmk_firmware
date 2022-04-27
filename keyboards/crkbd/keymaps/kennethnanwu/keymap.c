@@ -29,9 +29,9 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   //|--------+--------+--------+--------+--------+--------|                    |--------+--------+--------+--------+--------+--------|
       KC_ESC,    KC_A,    KC_S,    KC_D,    KC_F,  KC_G,                         KC_H,    KC_J,    KC_K,  KC_L,RSFT_T(KC_SCLN),KC_BSPC,
   //|--------+--------+--------+--------+-------+--------|                    |--------+--------+--------+--------+--------+--------|
-      KC_LSFT,   KC_Z,     KC_X,   KC_C,    KC_V,    KC_B,                         KC_N,  KC_M,    KC_COMM, KC_DOT,RCTL_T(KC_SLSH),KC_BSLS,
+      KC_LCTL,LSFT_T(KC_Z),KC_X, KC_C,    KC_V,    KC_B,                         KC_N,  KC_M,    KC_COMM, KC_DOT,RCTL_T(KC_SLSH),KC_BSLS,
   //|--------+--------+--------+--------+--------+--------+--------|  |--------+--------+--------+--------+--------+--------+--------|
-                                          KC_LALT, KC_LGUI, LCTL_T(KC_SPC),KC_ENT, TT(1),KC_CAPS
+                                          KC_LALT, KC_LGUI, KC_SPC,      KC_ENT, TT(1),KC_CAPS
                                       //`--------------------------'  `--------------------------'
 
   ),
@@ -42,9 +42,9 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   //|--------+--------+--------+--------+--------+--------|                    |--------+--------+--------+--------+--------+--------|
       KC_ESC,   KC_A,  KC_HOME,  KC_PGUP, KC_PGDN, KC_END,                      KC_LEFT, KC_DOWN,  KC_UP,  KC_RGHT,RSFT_T(KC_SCLN),KC_BSPC,
   //|--------+--------+--------+--------+--------+--------|                    |--------+--------+--------+--------+--------+--------|
-     KC_LSFT, KC_UNDS, KC_PLUS, KC_LCBR, KC_RCBR, KC_TILD,                       KC_GRV,  KC_LBRC, KC_RBRC, KC_MINS, KC_EQL, KC_BSLS,
+     KC_LCTL, KC_PLUS, KC_UNDS, KC_LCBR, KC_RCBR, KC_TILD,                       KC_GRV,  KC_LBRC, KC_RBRC, KC_MINS, KC_EQL, KC_BSLS,
   //|--------+--------+--------+--------+--------+--------+--------|  |--------+--------+--------+--------+--------+--------+--------|
-                                          KC_LALT, KC_LGUI, LCTL_T(KC_SPC),KC_ENT,KC_TRNS, KC_CAPS
+                                          KC_LALT, KC_LGUI, KC_SPC,     KC_ENT,  KC_TRNS, KC_CAPS
                                       //`--------------------------'  `--------------------------'
   )
 };
