@@ -31,7 +31,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   //|--------+--------+--------+--------+-------+--------|                    |--------+--------+--------+--------+--------+--------|
       KC_LCTL,  KC_Z,    KC_X,    KC_C,    KC_V,    KC_B,                         KC_N,  KC_M,    KC_COMM, KC_DOT,RCTL_T(KC_SLSH),KC_BSLS,
   //|--------+--------+--------+--------+--------+--------+--------|  |--------+--------+--------+--------+--------+--------+--------|
-                                          KC_LALT, KC_LGUI, KC_SPC,     KC_ENT, TT(1),KC_CAPS
+                                          KC_LALT, KC_LGUI, KC_SPC,     KC_ENT, TT(1),LT(2,KC_CAPS)
                                       //`--------------------------'  `--------------------------'
 
   ),
@@ -46,17 +46,32 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   //|--------+--------+--------+--------+--------+--------+--------|  |--------+--------+--------+--------+--------+--------+--------|
                                           KC_LALT, KC_LGUI, KC_SPC,     KC_ENT,  KC_TRNS, KC_CAPS
                                       //`--------------------------'  `--------------------------'
+  ),
+  [2] = LAYOUT_split_3x6_3(
+  //,-----------------------------------------------------.                    ,-----------------------------------------------------.
+        KC_NO, KC_NO,    KC_NO,   KC_NO,   KC_NO,   KC_NO,                        KC_F1,   KC_F2,   KC_F3,   KC_F4,   KC_F5,  KC_F6,
+  //|--------+--------+--------+--------+--------+--------|                    |--------+--------+--------+--------+--------+--------|
+      RGB_TOG, RGB_MOD, RGB_SAI, RGB_VAI, RGB_HUI, RGB_SPI,                        KC_F7,  KC_F8,  KC_F9,   KC_F10,  KC_F11,  KC_F12,
+  //|--------+--------+--------+--------+--------+--------|                    |--------+--------+--------+--------+--------+--------|
+      KC_NO,  RGB_RMOD, RGB_SAD, RGB_VAD, RGB_HUD, RGB_SPD,                      BL_TOGG, BL_BRTG, BL_INC,  BL_DEC,   BL_BRTG,  KC_NO,
+  //|--------+--------+--------+--------+--------+--------+--------|  |--------+--------+--------+--------+--------+--------+--------|
+                                          KC_NO,   KC_NO,   KC_NO,       KC_NO,   KC_NO, LT(3,KC_CAPS)
+                                      //`--------------------------'  `--------------------------'
   )
 };
 
 const rgblight_segment_t PROGMEM layer_navi[] = RGBLIGHT_LAYER_SEGMENTS(
-    {1, 10, HSV_GREEN},
-    {22, 20, HSV_GREEN}
+    {1, 5, HSV_GREEN},
+    {10, 5, HSV_GREEN},
+    {22, 5, HSV_GREEN},
+    {32, 5, HSV_GREEN}
 );
 
 const rgblight_segment_t PROGMEM layer_caps[] = RGBLIGHT_LAYER_SEGMENTS(
-    {11, 10, HSV_RED},
-    {32, 5, HSV_RED}
+    {6, 5, HSV_RED},
+    {16, 5, HSV_RED},
+    {27, 5, HSV_RED},
+    {37, 5, HSV_RED}
 );
 
 // Now define the array of layers. Later layers take precedence
