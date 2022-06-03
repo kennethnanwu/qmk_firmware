@@ -38,6 +38,12 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 // #define RGB_MATRIX_ENABLE
 
+#define MOUSEKEY_MAX_SPEED 8
+#define MOUSEKEY_MOVE_DELTA 2
+#define MOUSEKEY_INTERVAL 16
+#define MOUSEKEY_TIME_TO_MAX 70
+#define MOUSEKEY_WHEEL_MAX_SPEED 4
+// #define MOUSEKEY_WHEEL_TIME_TO_MAX 0
 
 // When the user holds a key after tapping it, the tapping function is
 // repeated by default, rather than activating the hold function.
