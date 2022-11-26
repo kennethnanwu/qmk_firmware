@@ -38,10 +38,10 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 // #define RGB_MATRIX_ENABLE
 
-#define MOUSEKEY_MAX_SPEED 8
+#define MOUSEKEY_MAX_SPEED 9
 #define MOUSEKEY_MOVE_DELTA 2
 #define MOUSEKEY_INTERVAL 16
-#define MOUSEKEY_TIME_TO_MAX 70
+#define MOUSEKEY_TIME_TO_MAX 40
 #define MOUSEKEY_WHEEL_MAX_SPEED 4
 // #define MOUSEKEY_WHEEL_TIME_TO_MAX 0
 
