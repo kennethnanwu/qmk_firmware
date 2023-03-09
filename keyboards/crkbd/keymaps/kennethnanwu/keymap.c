@@ -27,14 +27,14 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   //,-----------------------------------------------------.                    ,-----------------------------------------------------.
      KC_TAB,    KC_Q,    KC_W,    KC_E,    KC_R,    KC_T,                         KC_Y,    KC_U,    KC_I,    KC_O,    KC_P,  KC_BSPC,
   //|--------+--------+--------+--------+--------+--------|                    |--------+--------+--------+--------+--------+--------|
-     KC_LCTL,   KC_A,    KC_S,    KC_D,    KC_F,    KC_G,                         KC_H,    KC_J,    KC_K,KC_L,LT(1, KC_SCLN),RCTL(KC_TAB),
+     KC_LCTL,   KC_A,    KC_S,    KC_D,    KC_F,    KC_G,                         KC_H,    KC_J,    KC_K,  KC_L,    KC_SCLN, RCTL(KC_TAB),
   //|--------+--------+--------+--------+--------+--------|                    |--------+--------+--------+--------+--------+--------|
-     KC_LSFT,   KC_Z,    KC_X,    KC_C,    KC_V,    KC_B,                         KC_N,   KC_M,    KC_COMM, KC_DOT, KC_SLSH, KC_CAPS,
+     KC_LSFT,   KC_Z,    KC_X,    KC_C,    KC_V,    KC_B,                         KC_N,   KC_M,    KC_COMM, KC_DOT, KC_SLSH, RSFT_T(KC_CAPS),
   //|--------+--------+--------+--------+--------+--------+--------|  |--------+--------+--------+--------+--------+--------+--------|
                                          KC_LALT, KC_LGUI,  KC_SPC,     KC_ENT,   MO(2),  TG(1)
                                       //`--------------------------'  `--------------------------'
   ),
-  [1] = LAYOUT_split_3x6_3(
+  [1]= LAYOUT_split_3x6_3(
   //,-----------------------------------------------------.                    ,-----------------------------------------------------.
      KC_TRNS, KC_TRNS, KC_WH_D, KC_MS_U, KC_WH_U, KC_TRNS,                      KC_HOME, KC_PGDN, KC_PGUP, KC_END,  KC_TRNS, KC_TRNS,
   //|--------+--------+--------+--------+--------+--------|                    |--------+--------+--------+--------+--------+--------|
@@ -42,7 +42,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   //|--------+--------+--------+--------+--------+--------|                    |--------+--------+--------+--------+--------+--------|
      KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS,                      KC_TRNS,KC_MS_BTN1,KC_MS_BTN2,KC_MS_BTN3,KC_TRNS,KC_TRNS,
   //|--------+--------+--------+--------+--------+--------+--------|  |--------+--------+--------+--------+--------+--------+--------|
-                                          KC_TRNS, KC_TRNS, KC_TRNS,    KC_TRNS,  KC_TRNS, KC_TRNS
+                                          KC_TRNS, KC_TRNS, KC_TRNS,    KC_TRNS,  TG(2), KC_TRNS
                                       //`--------------------------'  `--------------------------'
   ),
 // KC_TRNS means transparent, required for MO()
@@ -65,7 +65,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   //|--------+--------+--------+--------+--------+--------|                    |--------+--------+--------+--------+--------+--------|
       KC_NO,  RGB_RMOD, RGB_SAD, RGB_VAD, RGB_HUD, RGB_SPD,                      BL_TOGG, BL_BRTG, BL_INC,  BL_DEC,  BL_BRTG, KC_NO,
   //|--------+--------+--------+--------+--------+--------+--------|  |--------+--------+--------+--------+--------+--------+--------|
-                                          KC_NO,   KC_NO,   KC_NO,       KC_NO,   KC_NO, KC_CAPS
+                                          KC_TRNS, KC_TRNS, KC_TRNS,    KC_TRNS, KC_TRNS, KC_TRNS
                                       //`--------------------------'  `--------------------------'
   )
 };
@@ -84,10 +84,18 @@ const rgblight_segment_t PROGMEM layer_caps[] = RGBLIGHT_LAYER_SEGMENTS(
     {37, 5, HSV_RED}
 );
 
+const rgblight_segment_t PROGMEM layer_num[] = RGBLIGHT_LAYER_SEGMENTS(
+    {1, 5, HSV_BLUE},
+    {10, 5, HSV_BLUE},
+    {22, 5, HSV_BLUE},
+    {32, 5, HSV_BLUE}
+);
+
 // Now define the array of layers. Later layers take precedence
 const rgblight_segment_t* const PROGMEM my_rgb_layers[] = RGBLIGHT_LAYERS_LIST(
     layer_navi,
-    layer_caps
+    layer_caps,
+    layer_num
 );
 
 void keyboard_post_init_user(void) {
@@ -102,6 +110,7 @@ bool led_update_user(led_t led_state) {
 
 layer_state_t layer_state_set_user(layer_state_t state) {
     rgblight_set_layer_state(0, layer_state_cmp(state, 1));
+    rgblight_set_layer_state(2, layer_state_cmp(state, 2));
     return state;
 }
 
