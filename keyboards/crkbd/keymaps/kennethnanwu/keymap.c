@@ -33,27 +33,27 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   //|--------+--------+--------+--------+--------+--------|                    |--------+--------+--------+--------+--------+--------|
      KC_LSFT,   KC_Z,    KC_X,    KC_C,    KC_V,    KC_B,                         KC_N,   KC_M,    KC_COMM, KC_DOT, KC_SLSH, RSFT_T(KC_CAPS),
   //|--------+--------+--------+--------+--------+--------+--------|  |--------+--------+--------+--------+--------+--------+--------|
-                                  	KC_LGUI,   MO(2),   KC_SPC,     KC_ENT,  MO(1),  KC_RALT
+                                  	      MO(2),  KC_LGUI,  KC_SPC,     KC_ENT,  MO(1),  KC_RALT
                                       //`--------------------------'  `--------------------------'
   ),
   [1]= LAYOUT_split_3x6_3(
   //,-----------------------------------------------------.                    ,-----------------------------------------------------.
-     KC_TRNS,   KC_1,    KC_2,    KC_3,    KC_4,    KC_5,                        KC_6,    KC_7,    KC_8,    KC_9,    KC_0,  KC_TRNS,
+     KC_ESC,   KC_1,    KC_2,    KC_3,    KC_4,    KC_5,                        KC_6,    KC_7,    KC_8,    KC_9,    KC_0,  KC_TRNS,
   //|--------+--------+--------+--------+--------+--------|                    |--------+--------+--------+--------+--------+--------|
      KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS,                      KC_LEFT, KC_DOWN,  KC_UP,  KC_RGHT, KC_TRNS, KC_TRNS,
   //|--------+--------+--------+--------+--------+--------|                    |--------+--------+--------+--------+--------+--------|
-     KC_TRNS, KC_TRNS, KC_VOLD, KC_MUTE, KC_VOLU, KC_MPLY,                      KC_GRV,  KC_LBRC, KC_RBRC, KC_MINS, KC_EQL, KC_BSLS,
+     KC_TRNS, RGB_TOG, KC_VOLD, KC_MUTE, KC_VOLU, KC_MPLY,                      KC_GRV,  KC_LBRC, KC_RBRC, KC_MINS, KC_EQL, RSFT_T(KC_BSLS),
   //|--------+--------+--------+--------+--------+--------+--------|  |--------+--------+--------+--------+--------+--------+--------|
-                                          KC_TRNS, TO(2), KC_TRNS,    KC_TRNS, KC_TRNS, KC_TRNS
+                                         KC_LALT, KC_TRNS, KC_TRNS,    KC_TRNS, KC_TRNS, KC_TRNS
                                       //`--------------------------'  `--------------------------'
   ),
   [2]= LAYOUT_split_3x6_3(
   //,-----------------------------------------------------.                    ,-----------------------------------------------------.
-     KC_TRNS,  KC_TRNS, KC_WH_D, KC_MS_U, KC_WH_U, KC_TRNS,                      KC_HOME, KC_PGDN, KC_PGUP, KC_END,  KC_TRNS, KC_TRNS,
+     KC_ESC,  KC_TRNS, KC_WH_D, KC_MS_U, KC_WH_U, KC_TRNS,                      KC_HOME, KC_PGDN, KC_PGUP, KC_END,  KC_TRNS, KC_TRNS,
   //|--------+--------+--------+--------+--------+--------|                    |--------+--------+--------+--------+--------+--------|
-     KC_ESC, KC_TRNS, KC_MS_L, KC_MS_D, KC_MS_R, KC_TRNS,                      KC_LEFT, KC_DOWN,  KC_UP,  KC_RGHT, KC_TRNS, KC_TRNS,
+     KC_TRNS, KC_TRNS, KC_MS_L, KC_MS_D, KC_MS_R, KC_TRNS,                      KC_LEFT, KC_DOWN,  KC_UP,  KC_RGHT, KC_TRNS, KC_TRNS,
   //|--------+--------+--------+--------+--------+--------|                    |--------+--------+--------+--------+--------+--------|
-     KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS,                      KC_TRNS,KC_MS_BTN1,KC_MS_BTN2,KC_MS_BTN3,KC_TRNS,KC_TRNS,
+     KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS,                     KC_TRNS,KC_MS_BTN1,KC_MS_BTN2,KC_MS_BTN3,KC_TRNS,KC_TRNS,
   //|--------+--------+--------+--------+--------+--------+--------|  |--------+--------+--------+--------+--------+--------+--------|
                                           KC_TRNS, KC_TRNS, KC_TRNS,    KC_TRNS, TO(1), KC_TRNS
                                       //`--------------------------'  `--------------------------'
@@ -68,11 +68,11 @@ const rgblight_segment_t PROGMEM layer_navi[] = RGBLIGHT_LAYER_SEGMENTS(
 );
 
 const rgblight_segment_t PROGMEM layer_caps[] = RGBLIGHT_LAYER_SEGMENTS(
-    // {6, 5, HSV_RED},
-    // {16, 5, HSV_RED},
-    // {27, 5, HSV_RED},
-    // {37, 5, HSV_RED}
-    {1, 30, HSV_RED}
+    {6, 5, HSV_YELLOW},
+    {16, 5, HSV_YELLOW},
+    {27, 5, HSV_YELLOW},
+    {37, 5, HSV_YELLOW}
+    // {1, 30, HSV_RED}
 );
 
 const rgblight_segment_t PROGMEM layer_num[] = RGBLIGHT_LAYER_SEGMENTS(
