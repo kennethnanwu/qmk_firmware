@@ -33,7 +33,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   //|--------+--------+--------+--------+--------+--------|                    |--------+--------+--------+--------+--------+--------|
      KC_LSFT,   KC_Z,    KC_X,    KC_C,    KC_V,    KC_B,                         KC_N,   KC_M,    KC_COMM, KC_DOT, KC_SLSH, RSFT_T(KC_CAPS),
   //|--------+--------+--------+--------+--------+--------+--------|  |--------+--------+--------+--------+--------+--------+--------|
-                                  	      MO(2),  KC_LGUI,  KC_SPC,     KC_ENT,  MO(1),  KC_RALT
+                                  	      TG(2),  KC_LGUI,  KC_SPC,     KC_ENT,  MO(1),  KC_RALT
                                       //`--------------------------'  `--------------------------'
   ),
   [1]= LAYOUT_split_3x6_3(
@@ -42,7 +42,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   //|--------+--------+--------+--------+--------+--------|                    |--------+--------+--------+--------+--------+--------|
      KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS,                      KC_LEFT, KC_DOWN,  KC_UP,  KC_RGHT, KC_TRNS, KC_TRNS,
   //|--------+--------+--------+--------+--------+--------|                    |--------+--------+--------+--------+--------+--------|
-     KC_TRNS, RGB_TOG, KC_VOLD, KC_MUTE, KC_VOLU, KC_MPLY,                      KC_GRV,  KC_LBRC, KC_RBRC, KC_MINS, KC_EQL, RSFT_T(KC_BSLS),
+     KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS,                      KC_GRV,  KC_LBRC, KC_RBRC, KC_MINS, KC_EQL, RSFT_T(KC_BSLS),
   //|--------+--------+--------+--------+--------+--------+--------|  |--------+--------+--------+--------+--------+--------+--------|
                                          KC_LALT, KC_TRNS, KC_TRNS,    KC_TRNS, KC_TRNS, KC_TRNS
                                       //`--------------------------'  `--------------------------'
@@ -53,7 +53,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   //|--------+--------+--------+--------+--------+--------|                    |--------+--------+--------+--------+--------+--------|
      KC_TRNS, KC_TRNS, KC_MS_L, KC_MS_D, KC_MS_R, KC_TRNS,                      KC_LEFT, KC_DOWN,  KC_UP,  KC_RGHT, KC_TRNS, KC_TRNS,
   //|--------+--------+--------+--------+--------+--------|                    |--------+--------+--------+--------+--------+--------|
-     KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS,                     KC_TRNS,KC_MS_BTN1,KC_MS_BTN2,KC_MS_BTN3,KC_TRNS,KC_TRNS,
+     RGB_TOG, RGB_VAD, KC_MUTE, KC_VOLD, KC_VOLU, KC_MPLY,                     KC_TRNS,KC_MS_BTN1,KC_MS_BTN2,KC_MS_BTN3,KC_TRNS,KC_TRNS,
   //|--------+--------+--------+--------+--------+--------+--------|  |--------+--------+--------+--------+--------+--------+--------|
                                           KC_TRNS, KC_TRNS, KC_TRNS,    KC_TRNS, TO(1), KC_TRNS
                                       //`--------------------------'  `--------------------------'
