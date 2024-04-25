@@ -51,8 +51,8 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 // TAPPING_FORCE_HOLD removes that ability to let the user activate the hold function instead,
 // in the case of holding the dual-role key after having tapped it.
 // #define TAPPING_FORCE_HOLD
-#define TAPPING_TERM 250
-#define TAPPING_TOGGLE 1
+#define TAPPING_TERM 200
+#define TAPPING_TOGGLE 2
 
 // #ifdef RGBLIGHT_ENABLE
 //     #undef RGBLED_NUM
